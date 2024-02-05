@@ -19,10 +19,14 @@ ruleTester.run("no-unnecessary-brackets", rule, {
   valid: [
     // Valid examples without unnecessary brackets
     { code: '<div className="example">Hello</div>' },
+    { code: "<div className='example'>Hello</div>" },
     { code: "<div className={`example-${variable}`}>Hello</div>" },
     { code: "<div>{5}</div>" },
     { code: "<div>{variable}</div>" },
-    { code: "<div>string</div>" },
+    { code: "<div>Hello</div>" },
+    { code: '<div>{" "}</div>' },
+    { code: "<div>{' '}</div>" },
+    { code: "<div><span></span>{' '}\n<span></span></div>" },
   ],
 
   invalid: [
@@ -30,10 +34,25 @@ ruleTester.run("no-unnecessary-brackets", rule, {
     {
       code: '<div className={"example"}>Hello</div>',
       errors: [{ messageId: "unnecessaryBrackets" }],
+      output: '<div className="example">Hello</div>',
     },
     {
-      code: '<div>{"string"}</div>',
+      code: "<div className={'example'}>Hello</div>",
       errors: [{ messageId: "unnecessaryBrackets" }],
+      output: "<div className='example'>Hello</div>",
+    },
+    {
+      code: '<div>{"Hello"}</div>',
+      errors: [{ messageId: "unnecessaryBrackets" }],
+      output: "<div>Hello</div>",
+    },
+    {
+      code: '<div>{"Hello"} {"World"}</div>',
+      errors: [
+        { messageId: "unnecessaryBrackets" },
+        { messageId: "unnecessaryBrackets" },
+      ],
+      output: "<div>Hello World</div>",
     },
   ],
 });
