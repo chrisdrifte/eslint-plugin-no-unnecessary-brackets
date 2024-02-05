@@ -46,8 +46,8 @@ Then configure the rules you want to use under the rules section.
 
 <!-- begin auto-generated rules list -->
 
-| Name                                                             | Description                                                          |
-| :--------------------------------------------------------------- | :------------------------------------------------------------------- |
-| [no-unnecessary-brackets](docs/rules/no-unnecessary-brackets.md) | Warns when string literals are supplied inside curly brackets in jsx |
+| Name                                                                                                                                            | Description                                                          |
+| :---------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------- |
+| [no-unnecessary-brackets](https://github.com/chrisdrifte/eslint-plugin-no-unnecessary-brackets/blob/main/docs/rules/no-unnecessary-brackets.md) | Warns when string literals are supplied inside curly brackets in jsx |
 
 <!-- end auto-generated rules list -->
