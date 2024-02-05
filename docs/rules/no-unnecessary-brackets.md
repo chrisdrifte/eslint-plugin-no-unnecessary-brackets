@@ -1,27 +1,25 @@
-# Warns when string literals are supplied inside curly brackets in jsx (`no-unnecessary-brackets`)
+# Warns when string literals are supplied inside curly brackets in jsx (`no-unnecessary-brackets/no-unnecessary-brackets`)
 
-Please describe the origin of the rule here.
+<!-- end auto-generated rule header -->
 
 ## Rule Details
-
-This rule aims to...
 
 Examples of **incorrect** code for this rule:
 
 ```js
-// fill me in
+<div className={"example"}>Hello</div>
+```
+
+```js
+<div>{"string"}</div>
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-// fill me in
+<div className="example">Hello</div>
 ```
 
-## When Not To Use It
-
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+```js
+<div>string</div>
+```

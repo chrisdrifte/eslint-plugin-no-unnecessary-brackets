@@ -18,10 +18,11 @@ const ruleTester = new RuleTester({
 ruleTester.run("no-unnecessary-brackets", rule, {
   valid: [
     // Valid examples without unnecessary brackets
-    { code: '<div className="example">Hello</div>;' },
+    { code: '<div className="example">Hello</div>' },
     { code: "<div className={`example-${variable}`}>Hello</div>" },
     { code: "<div>{5}</div>" },
     { code: "<div>{variable}</div>" },
+    { code: "<div>string</div>" },
   ],
 
   invalid: [

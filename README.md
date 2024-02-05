@@ -22,37 +22,26 @@ Add `no-unnecessary-brackets` to the plugins section of your `.eslintrc` configu
 
 ```json
 {
-    "plugins": [
-        "no-unnecessary-brackets"
-    ]
+  "plugins": ["no-unnecessary-brackets"]
 }
 ```
-
 
 Then configure the rules you want to use under the rules section.
 
 ```json
 {
-    "rules": {
-        "no-unnecessary-brackets/rule-name": 2
-    }
+  "rules": {
+    "no-unnecessary-brackets/no-unnecessary-brackets": 1
+  }
 }
 ```
-
-
-
-## Configurations
-
-<!-- begin auto-generated configs list -->
-TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
-<!-- end auto-generated configs list -->
-
-
 
 ## Rules
 
 <!-- begin auto-generated rules list -->
-TODO: Run eslint-doc-generator to generate the rules list.
+
+| Name                                                             | Description                                                          |
+| :--------------------------------------------------------------- | :------------------------------------------------------------------- |
+| [no-unnecessary-brackets](docs/rules/no-unnecessary-brackets.md) | Warns when string literals are supplied inside curly brackets in jsx |
+
 <!-- end auto-generated rules list -->
-
-
