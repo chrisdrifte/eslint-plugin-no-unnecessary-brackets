@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-unnecessary-brackets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Warns when string literals are supplied inside curly brackets in jsx",
   "keywords": [
     "eslint",
