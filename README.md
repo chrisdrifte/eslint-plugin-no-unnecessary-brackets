@@ -1,6 +1,12 @@
 # eslint-plugin-no-unnecessary-brackets
 
-Warns when string literals are supplied inside curly brackets in jsx
+Warns when string literals are supplied inside curly brackets in jsx.
+
+eg.
+
+```js
+<div className={"example"}>Hello</div>
+```
 
 ## Installation
 
